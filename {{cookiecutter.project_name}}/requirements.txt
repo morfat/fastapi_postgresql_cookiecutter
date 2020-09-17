@@ -1,0 +1,8 @@
+wheel
+fastapi
+uvicorn
+python-jose
+psycopg2
+SQLAlchemy
+python-dotenv
+pytest
