@@ -30,3 +30,11 @@ class HTTPMissingHeader(HTTPRequestError):
     def __init__(self, header_name: str):
         message = f"The header {header_name} is missing"
         super().__init__(message=message)
+
+class HTTPUnauthorized(HTTPRequestError):
+    code = 'unauthorized'
+    status_code = status.HTTP_401_UNAUTHORIZED
+
+class HTTPForbidden(HTTPRequestError):
+    code = 'forbidden'
+    status_code = status.HTTP_403_FORBIDDEN
